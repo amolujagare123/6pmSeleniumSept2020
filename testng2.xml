@@ -1,0 +1,14 @@
+<suite name="all sites">
+    <test name="module1">
+        <classes>
+            <class name="TestNGDemos.realCode.ForumSites"/>
+            <class name="TestNGDemos.realCode.SocialSites"/>
+        </classes>
+    </test>
+
+    <test name="module2">
+        <classes>
+            <class name="TestNGDemos.realCode.TutorialsSites"/>
+        </classes>
+    </test>
+</suite>

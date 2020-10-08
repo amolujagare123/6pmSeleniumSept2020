@@ -1,0 +1,27 @@
+<suite name="all sites">
+
+<!--    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter2" />
+    </listeners>-->
+
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+
+   <parameter name="openingUrl" value="http://gmail.com"/>
+   <parameter name="os" value="linux"/>
+
+    <test name="module1">
+        <classes>
+            <class name="TestNGDemos.PrametersDemo.ClassOne"/>
+            <class name="TestNGDemos.PrametersDemo.ClassTwo"/>
+        </classes>
+    </test>
+
+    <test name="module2">
+        <classes>
+            <class name="TestNGDemos.PrametersDemo.ClassThree"/>
+        </classes>
+    </test>
+</suite>

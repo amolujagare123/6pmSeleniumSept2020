@@ -1,0 +1,36 @@
+<suite name="my project name">
+
+    <groups>
+        <run>
+          <!--  <exclude name="email"/>-->
+            <include name="email"/>
+        </run>
+    </groups>
+
+
+    <test name="module1">
+
+        <classes>
+
+            <class name="TestNGDemos.MoreTest.ClassOne">
+                <methods>
+
+                    <include name="classOneTest1"/>
+                   <!-- <exclude name="classOneTest1"/>
+                    <exclude name="classOneTest3"/>-->
+                </methods>
+
+            </class>
+
+
+
+            <class name="TestNGDemos.MoreTest.ClassTwo"/>
+        </classes>
+    </test>
+
+    <test name="module2">
+        <classes>
+            <class name="TestNGDemos.MoreTest.ClassThree"/>
+        </classes>
+    </test>
+</suite>
