@@ -1,0 +1,15 @@
+<suite name="Demo project">
+
+    <listeners>
+    <listener class-name="reports.Util.MyListners"/>
+    </listeners>
+
+
+    <test name="module1">
+        <classes>
+            <class name="reports.ListnersDemo"/>
+            <class name="reports.ListnersDemo2"/>
+        </classes>
+    </test>
+
+</suite>
