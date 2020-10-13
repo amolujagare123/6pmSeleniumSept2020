@@ -1,5 +1,7 @@
 package reports.Util;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -25,5 +27,25 @@ public class Screenhot {
         FileUtils.copyFile(scrFile,new File("Reports\\screenshots\\"+img));
 
         return img;
+    }
+
+
+    public static ExtentReports initExtentObject()
+    {
+        ExtentSparkReporter reporter = new ExtentSparkReporter("Reports\\report.html");
+
+        reporter.config().setDocumentTitle("My Project name");
+        reporter.config().setReportName("All regression tests");
+
+
+        ExtentReports extent = new ExtentReports();
+        extent.attachReporter(reporter);
+
+        extent.setSystemInfo("Company Name","Scripting Logic");
+        extent.setSystemInfo("Project Name","HRM");
+        extent.setSystemInfo("Testers Name","Amol ujagare");
+        extent.setSystemInfo("Test Lead","xyz");
+
+        return  extent;
     }
 }
